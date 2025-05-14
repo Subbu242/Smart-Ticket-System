@@ -1,0 +1,15 @@
+body{
+	background-color: #9600B3;
+    width: 100%;
+    color:#fff;
+    font-weight: bold;
+    font-family: 'Raleway';
+   
+}
+p{
+    color: #fff;
+    font-size: 120px;
+    font-family: 'Raleway';
+    font-weight: bold;
+    text-align: center;
+}

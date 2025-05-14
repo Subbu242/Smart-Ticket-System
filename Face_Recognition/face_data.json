@@ -1,0 +1,14 @@
+{
+    "travel_id": 94,
+    "user_id": 1,
+    "source_id": 13,
+    "destination_id": 13,
+    "travel_date_enter": "2023-06-07 21:25:47",
+    "travel_date_exit": "2023-06-07 21:25:47",
+    "ride_cost": 0,
+    "user_name": "Subhash R",
+    "user_balance": 341.0,
+    "user_phone": "7892487188",
+    "source_station_name": "Mantri Square",
+    "destination_station_name": "Mantri Square"
+}
