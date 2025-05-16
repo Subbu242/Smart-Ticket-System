@@ -1,7 +1,7 @@
 <?php
 
 #include('../includes/config.php');
-$data=file_get_contents("/home/darpan/Desktop/PROJECT/CODES/Face_Recognition/face_data.json");
+$data=file_get_contents("D:\\Finay Year project\\Face_Recognition\\face_data.json");
 $res=json_decode($data);
 $recognized_id=$res->user_id;
 $name=$res->user_name;

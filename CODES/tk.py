@@ -1,3 +1,13 @@
+import sys
+import os
+
+# Add the Face_Recognition folder to sys.path so python can find pydriver
+face_recognition_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'Face_Recognition'))
+if face_recognition_path not in sys.path:
+    sys.path.insert(0, face_recognition_path)
+
+import pydriver
+
 from tkinter import * 
 import tkinter as tk
 import pydriver
@@ -108,10 +118,10 @@ def web_browser():
     webbrowser.open('http://localhost/smartticket/', new=2)
 
 def open_files():
-    os.system('nautilus /home/darpan/Desktop/PROJECT/CODES')
+    os.system('nautilus D:\\Finay Year project\\CODES')
 
 def open_documentation():
-    os.system('nautilus /home/darpan/Desktop/PROJECT/Documentation')
+    os.system('nautilus D:\\Finay Year project\\Documentation')
 
 def open_db():
     webbrowser.open('http://localhost/phpmyadmin/db_structure.php?server=1&db=smart-metro', new=2)
@@ -157,7 +167,7 @@ def new_folder():
 
 def read_image(photo):
 	image = Image.open(photo)
-	image = image.resize((1300, 700), Image.ANTIALIAS)
+	image = image.resize((1300, 700), Image.Resampling.LANCZOS)
 	return image
 
 #Header

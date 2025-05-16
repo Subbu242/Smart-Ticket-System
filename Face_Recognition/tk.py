@@ -70,7 +70,7 @@ def start_application():
             browserExe = "chrome"
             #os.system("pkill "+browserExe)
         else:
-            # text_to_speech_welcome(data["user_name"])  
+            text_to_speech_welcome(data["user_name"])  
             webbrowser.open("http://localhost/smartticket/Entry-Exit-Display/welcome.php")
             time.sleep(1)
             playsound('welcome_message.mp3')
@@ -78,7 +78,7 @@ def start_application():
             browserExe = "chrome"
             #os.system("pkill "+browserExe)
     else:
-        # text_to_speech_thank_you(data["user_name"])
+        text_to_speech_thank_you(data["user_name"])
         send_notification(data)
         webbrowser.open("http://localhost/smartticket/Entry-Exit-Display/exit-display.php") 
         time.sleep(5)
@@ -109,11 +109,11 @@ def web_browser():
 
 def open_files():
     # os.system('nautilus /Users/subhu/OneDrive/Desktop/Finay Year project/CODES')
-    webbrowser.open("C:\\Users\\subhu\\OneDrive\\Desktop\\Finay Year project\\CODES")
+    webbrowser.open("D:\\Finay Year project\\CODES")
 
 def open_documentation():
     # os.system('nautilus /home/darpan/Desktop/PROJECT/Documentation')
-    webbrowser.open("C:\\Users\\subhu\\OneDrive\\Desktop\\Finay Year project\\Documentation")
+    webbrowser.open("D:\\Finay Year project\\Documentation")
 
 def open_db():
     webbrowser.open('http://localhost/phpmyadmin/index.php?route=/sql&server=1&db=smart-metro&table=admin&pos=0', new=2)
@@ -159,7 +159,7 @@ def new_folder():
 
 def read_image(photo):
 	image = Image.open(photo)
-	image = image.resize((1300, 700), Image.ANTIALIAS)
+	image = image.resize((1300, 700), Image.Resampling.LANCZOS)
 	return image
 
 #Header
@@ -172,7 +172,7 @@ frame.grid()
 root.geometry("1550x800")
 
 img= (Image.open("train2.png"))
-resized_image= img.resize((1550,800), Image.ANTIALIAS)
+resized_image= img.resize((1550,800), Image.Resampling.LANCZOS)
 root.photo = ImageTk.PhotoImage(resized_image)
 root.photo1 = ImageTk.PhotoImage(read_image('project_flow.png'))
 root.photo2 = ImageTk.PhotoImage(read_image('res1.png'))
